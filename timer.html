@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <title>Toastmasters Timer</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="timer.js"></script>
+  </head>
+  <body>
+    <div class="container" style="text-align: center; padding-top: 50px">
+        <h1></h1>
+        <h1 id="start"></h1>
+        <form id="tempos">
+          <div class="form-group">
+            <label for="minimo">Tempo mínimo:</label>
+            <input type="number" name="minimo" id="minimo" min="1" max="8" style="width: 50px">
+            <small class="text-muted"> minutos</small>
+          </div>
+          <div class="form-group">
+            <label for="maximo">Tempo máximo:</label>
+            <input type="number" name="maximo" id="maximo" min="2" max="10" style="width: 50px">
+            <small class="text-muted"> minutos</small>
+          </div>
+          <button type="button" name="button" id="button" class="btn btn-primary" required>Começar</button>
+        </form>
+    </div>
+  </body>
+</html>
