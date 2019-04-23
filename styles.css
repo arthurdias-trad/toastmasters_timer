@@ -1,0 +1,13 @@
+@media screen and (max-width: 962px) {
+    .message {
+        font-size: 8vw;
+        padding: 4vw;
+    }
+}
+
+@media screen and (min-width: 962px) {
+    .message {
+        font-size: 5vw;
+        padding: 4vw;
+    }
+}

@@ -1,8 +1,8 @@
 var interval = null;
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#button").onclick = () => {
-    let min = document.getElementById("minimo").value;
-    let max = document.getElementById("maximo").value;
+    let min = parseInt(document.getElementById("minimo").value);
+    let max = parseInt(document.getElementById("maximo").value);
     if (min == "" || max == "") {
         alert("O tempo mínimo e máximo não podem estar vazios");
     } else if (min > max) {
@@ -48,8 +48,7 @@ count = (min, max) => {
     } else if (s >= max+30) {
         bodyColor.style.backgroundColor = 'purple';
         document.querySelector('#start').innerHTML = "Desqualificar";
-        document.querySelector('#start').style.fontSize = "80px";
-        document.querySelector('#start').style.padding = "80px";
+        document.querySelector('#start').classList.add('message');
     };
     s++;
     if (s > 0 && (s % 60 === 0)) {
