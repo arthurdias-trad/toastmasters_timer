@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
     } else if (min > max) {
         alert("O tempo máximo deve ser maior que o mínimo")
     } else {
-    interval = setInterval(function() {count(min, max);}, 1000);
-    remover();
+        interval = setInterval(function() {count(min, max);}, 1000);
+        remover();
     }
     };
 });
@@ -36,25 +36,25 @@ count = (min, max) => {
     min *= 60;
     max *= 60;
     let med = parseInt((min + max)/2)
-    s++;
-    if (s > 0 && (s % 60 === 0)) {
-    m++;
-    }
     let bodyColor = document.querySelector('body');
 
     document.querySelector('h1').innerHTML = time;
     if (s >= min && s < med) {
-    bodyColor.style.backgroundColor = 'green';
+        bodyColor.style.backgroundColor = 'green';
     } else if (s >= med && s < max) {
-    bodyColor.style.backgroundColor = 'yellow';
+        bodyColor.style.backgroundColor = 'yellow';
     } else if (s >= max && s < max+30) {
-    bodyColor.style.backgroundColor = 'red';
+        bodyColor.style.backgroundColor = 'red';
     } else if (s >= max+30) {
-    bodyColor.style.backgroundColor = 'purple';
-    document.querySelector('#start').innerHTML = "Desqualificar";
-    document.querySelector('#start').style.fontSize = "80px";
-    document.querySelector('#start').style.padding = "80px";
+        bodyColor.style.backgroundColor = 'purple';
+        document.querySelector('#start').innerHTML = "Desqualificar";
+        document.querySelector('#start').style.fontSize = "80px";
+        document.querySelector('#start').style.padding = "80px";
     };
+    s++;
+    if (s > 0 && (s % 60 === 0)) {
+        m++;
+    }
 
     return false;
 };
